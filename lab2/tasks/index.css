@@ -1,0 +1,345 @@
+.task21 {
+  margin: 0;
+}
+
+.task21 div {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.task21 header {
+  background-color: #eaeaea;
+  height: 6em;
+}
+
+.task21 header h1 {
+  margin: 0;
+  padding: 5px;
+}
+
+.task21 aside {
+  background-color: #c8fc98;
+  float: left;
+  width: 200px;
+  line-height: 1.5em;
+  margin-right: 10px;
+}
+
+.task21 aside h4,
+p {
+  margin: 0 0 0 10px;
+}
+
+.task21 aside p {
+  font-size: 15px;
+}
+
+.task21 span {
+  color: red;
+  font-style: italic;
+}
+
+.task21 section {
+  margin-top: 5px;
+}
+
+.task21 section p {
+  display: inline;
+  margin: 0;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.task21 footer {
+  background-color: black;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.task21 footer a {
+  color: yellow;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.task22 #left {
+  width: 25%;
+}
+
+.task22 #right {
+  float: right;
+  background-color: yellow;
+  margin: 0;
+}
+
+.task23 div {
+  margin: 0 auto;
+  width: 600px;
+  background-color: blue;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .task24 div {
+    width: 100%;
+  }
+}
+
+.task25 div {
+  margin: 0 auto;
+  max-width: 500px;
+  color: white;
+}
+
+.task25 div:first-of-type {
+  background-color: green;
+}
+
+.task25 div:nth-of-type(2) {
+  background-color: blue;
+  margin-top: 10px;
+  padding: 20px;
+  border: 20px solid blue;
+}
+
+.task26 div {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.task26 div:last-of-type {
+  margin-top: 20px;
+  max-width: 400px;
+  border: 10px solid blue;
+  padding: 40px;
+}
+
+.task27 div {
+  width: 10em;
+  height: 7em;
+  color: white;
+}
+
+.task27 #first {
+  background-color: blue;
+  position: static;
+}
+
+.task27 #second {
+  background-color: darkred;
+  position: relative;
+  /* top: 40px; left: 40px; */
+}
+
+.task27 #third {
+  background-color: peru;
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+
+.task27 #fourth {
+  width: 40em;
+  height: 25em;
+  position: relative;
+  background-color: indianred;
+}
+
+.task27 #fifth {
+  position: absolute;
+  width: 20em;
+  height: 12em;
+  left: 20em;
+  top: 8em;
+  background-color: indigo;
+}
+
+.task27 #sixth {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: green;
+  width: 6em;
+  height: 7em;
+}
+
+.task28 main {
+  background-color: aqua;
+}
+
+.task28 nav {
+  width: 12em;
+  float: left;
+  padding: 6px 0;
+  background-color: bisque;
+}
+
+.task28 section {
+  position: relative;
+  margin-left: 12em;
+  top: 0;
+  background-color: #eaeaea;
+}
+
+.task28 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: limegreen;
+}
+
+.task29 div {
+  background-color: blue;
+  margin: 0 auto;
+  width: 40%;
+  color: white;
+}
+
+.task29 img {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.task210 div:first-of-type {
+  float: left;
+  width: 12em;
+  height: 6em;
+  margin: 1.5em;
+  background-color: aquamarine;
+}
+
+.task210 div:last-of-type {
+  clear: left;
+  background-color: bisque;
+}
+
+.task211 .container {
+  height: auto;
+  min-height: 265px;
+  margin: 10px;
+  border: 2px solid green;
+  color: black;
+  background-color: aqua;
+}
+
+.task211 img {
+  float: right;
+}
+
+.task212 main {
+  border: 2px solid green;
+  background-color: aqua;
+}
+
+.task212 nav {
+  background-color: bisque;
+  float: left;
+  width: 500px;
+}
+
+.task212 section {
+  position: relative;
+  margin-left: 505px;
+  /* top: 0; */
+  background-color: #eaeaea;
+}
+
+@media (max-width: 500px) {
+  .task212 nav {
+    width: 200px;
+    float: left;
+  }
+  .task212 section {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+.task213 main {
+  border: 2px solid green;
+  background-color: aqua;
+}
+
+.task213 nav {
+  background-color: bisque;
+  float: left;
+  width: 500px;
+}
+
+.task213 img {
+  width: 40%;
+  height: 40%;
+  float: right;
+}
+
+.task213 section {
+  margin-left: 505px;
+  background-color: #eaeaea;
+}
+
+@media (max-width: 500px) {
+  .task213 nav {
+    width: 200px;
+    float: left;
+  }
+  .task213 section {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+.task214 main {
+  border: 2px solid green;
+  background-color: aqua;
+}
+
+.task214 nav {
+  background-color: bisque;
+  float: left;
+  width: 500px;
+}
+
+.task214 section {
+  margin-left: 505px;
+  background-color: #eaeaea;
+}
+
+@media (max-width: 500px) {
+  .task214 nav {
+    float: none;
+    width: 100%;
+  }
+
+  .task214 nav li {
+    display: inline;
+  }
+
+  .task214 section {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+.task215 div{
+    display: inline-block;
+    width: 14em;
+    height: 7em;
+    background-color: aquamarine;
+    margin: 1em;
+}
+
+.task215 div:last-of-type{
+    display: block;
+    width: auto;
+    height: auto;
+    background-color: bisque;
+}
+
+.colors {
+  color: #c8fc98 #eaeaea #ffff80 #fde95e red blue green blueviolet darkred peru
+    forestgreen indianred indigo white aqua bisque darkgray limegreen aquamarine;
+}
