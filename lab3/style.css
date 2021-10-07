@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 header h1 {
@@ -12,7 +14,6 @@ header h1 {
 
 header {
   background: green;
-  /* font-size: 1.1em; */
   color: white;
   text-align: center;
 }
@@ -21,7 +22,7 @@ footer {
   color: white;
   background-color: black;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   text-align: center;
   width: 100%;
 }
@@ -35,7 +36,7 @@ footer h2 {
 
 main {
   position: fixed;
-  width: 60%;
+  width: 40%;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -47,20 +48,24 @@ main {
 nav {
   background-color: red;
   float: left;
-  width: 23%;
+  width: 25%;
   height: 100%;
   font-size: 0.9em;
-  line-height: 2em;
 }
 
 nav ul{
     list-style-type: none;
+    text-decoration: underline;
     padding-left: 40px;
-    padding-right: 20px;
+    padding-right: 45px;
 }
 
-nam ul li {
-    padding-right: 20px;
+nav li{
+  margin-bottom: 10px;
+}
+
+nav li:hover{
+  background: green;
 }
 
 nav a{
@@ -71,14 +76,57 @@ nav a{
 .content {
   float: left;
   font-size: 1em;
-  width: 60%;
+  width: 70%;
   height: 100%;
   margin: 0;
-  padding: 30px 0 0 30px;
+  padding: 20px 0 0 23px;
 }
-
 
 #first-letter{
     color: red;
     font-size: 2em;
+}
+
+.content::-moz-selection { /* Code for Firefox */
+  background: green;
+}
+
+.content::selection {
+  background: green;
+}
+
+@media only screen and (max-width: 1600px) {
+  main{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  main{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav{
+    width: 30%;
+  }
+  .content{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav ul{
+    padding-right: 10px;
+  }
+  main{
+    overflow: scroll;
+  }
 }
