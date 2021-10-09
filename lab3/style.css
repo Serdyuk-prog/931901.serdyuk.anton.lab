@@ -1,244 +1,45 @@
-body, html {
-  margin: 0;
+body, html{
+  height: 100%;
+}
+body {
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%; 
-}
-
-header h1 {
-  font-size: 25px;
-  font-weight: 200;
   margin: 0;
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  position: relative;
-  top: 0;
-  background: green;
-  color: white;
-  text-align: center;
-}
-
-footer {
-  color: white;
-  background-color: black;
-  position: absolute;
-  bottom: 0px;
-  text-align: center;
-  width: 100%;
-}
-
-footer h2 {
-  font-size: 17px;
-  font-weight: 200;
-  margin: 0;
-  padding: 5px;
-}
-
-main {
-  width: 40%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: lightblue;
-}
-
-nav{
-  float: left;
-  width: 30%;
-  margin: 0;
-  height: 100%;
-  background-color: red;
-}
-
-.content{
-  margin: 0;
-  width: 70%;
-  height: 100%;
-  float: left;
-  background-color: wheat;
-}
-
-@media only screen and (max-width: 1400px) {
-  main{
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  main{
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  main{
-    width: 100%;
-  }
-  body{
-    overflow: scroll;
-  }
-  footer{
-    position: relative;
-  }
-}
-
-/* header{
+header{
   background-color: green;
+  padding: 8px;
   text-align: center;
-  height: 5%;
+  font-size: 0.8em;
+  color: white;
 }
 
 header h1{
-  font-size: 25px;
   margin: 0;
 }
 
 main{
-  display: block;
-  height: 100%;
-  border: 3px solid gold;
+  background-color: thistle;
+  width: 50%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 }
 
-footer{
-  background-color: black;
-  text-align: center;
-  color: white;
-}
-
-footer h2{
-  font-size: 17px;
-  margin: 0;
-  padding: 5px;
-}
-
-nav{
-  float: left;
-  height: 100%;
+.nav{
   background-color: red;
 }
 
-.content{
-} */
-/* header h1 {
-  font-size: 25px;
-  font-weight: 200;
-  margin: 0;
-  padding: 8px;
-}
-
-header {
-  background: green;
-  color: white;
-  text-align: center;
-}
-
-footer {
-  color: white;
+.footer{
   background-color: black;
-  position: absolute;
-  bottom: 0px;
   text-align: center;
-  width: 100%;
+  font-size: 0.7em;
+  color: white;
 }
 
-footer h2 {
-  font-size: 17px;
-  font-weight: 200;
+.footer h2{
   margin: 0;
-  padding: 5px;
-}
-
-main {
-  width: 40%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-}
-
-nav {
-  background-color: red;
-  float: left;
-  width: 25%;
-  height: 100%;
-  font-size: 0.9em;
-}
-
-nav ul{
-    list-style-type: none;
-    text-decoration: underline;
-    padding-left: 40px;
-    padding-right: 45px;
-}
-
-nav li{
-  margin-bottom: 10px;
-}
-
-nav li:hover{
-  background: green;
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-}
-
-.content {
-  float: left;
-  font-size: 1em;
-  width: 70%;
-  height: 100%;
-  margin: 0;
-  padding: 20px 0 0 23px;
-}
-
-#first-letter{
-    color: red;
-    font-size: 2em;
-}
-
-.content::-moz-selection { /* Code for Firefox */
-  /* background: green; */
-
-
-  /* background: green; */
-
-
-/* @media only screen and (max-width: 1600px) {
-  main{
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  main{
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  main{
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  nav{
-    width: 30%;
-  }
-  .content{
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  nav ul{
-    padding-right: 10px;
-  }
-  main{
-    overflow: scroll;
-  }
 }
