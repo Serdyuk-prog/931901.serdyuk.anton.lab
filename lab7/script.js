@@ -10,7 +10,7 @@ function submitForm(e) {
 buttons.forEach(btn => {
     btn.onclick = () => {
         let number = input.value;
-        if (number <= input.max) {
+        if (number <= parseInt(input.max)) {
             switch (btn.id) {
                 case 'sq-btn':
                     for (let i = 0; i < number; i++) {
