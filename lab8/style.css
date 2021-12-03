@@ -1,0 +1,29 @@
+table{
+    border-spacing: 0px;
+}
+table tr td{
+    border: 1px solid gray;
+    padding: 0;
+    vertical-align: baseline;
+}
+input{
+    border:  none;  
+}
+.controls{
+    border: none;
+    height: 25px;
+    width: 25px;
+}
+.controls:hover{
+    background-color: rgb(220, 220, 220);
+}
+button{
+    display: block;
+    height: 25px;
+    cursor: pointer;
+}
+
+p{
+    font-family: monospace;
+    margin: 0px;
+}
