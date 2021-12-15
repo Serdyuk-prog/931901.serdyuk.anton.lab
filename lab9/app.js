@@ -1,4 +1,6 @@
-const inputPenel = document.querySelector("#input");
+const firstNum = document.querySelector("#firstNum");
+const secondNum = document.querySelector("#secondNum");
+const sign = document.querySelector("#sign");
 const buttons = document.querySelectorAll("button");
 let isExpressionClear = true;
 let isOperationDefined = false;
@@ -25,58 +27,74 @@ function actionHandler(data) {
     }
 }
 
-// function clearHandler() {
-//     inputPenel.innerText = "0";
-//     isExpressionClear = true;
-//     isOperationDefined = false;
-// }
+function clearHandler() {
+    firstNum.innerText = "0";
+    sign.innerText = "";
+    secondNum.innerText = "";
+    isExpressionClear = true;
+    isOperationDefined = false;
+    firstNum.style.color = "#000000";
+    sign.style.color = "#000000";
+}
 
-// function bspHandler() {
-//     if (isNumber(inputPenel.innerText.substr(-1))) {
-//         inputPenel.innerText = inputPenel.innerText.substring(0, inputPenel.innerText.length - 1);
-//     } else {
-//         inputPenel.innerText = inputPenel.innerText.substring(0, inputPenel.innerText.length - 3);
-//         isOperationDefined = false;
-//     }
+function bspHandler() {
+    if (secondNum.innerText != "") {
+        secondNum.innerText = secondNum.innerText.substring(0, secondNum.innerText.length - 1);
+    } else if (isOperationDefined) {
+        sign.innerText = "";
+        isOperationDefined = false
+    } else {
+        firstNum.innerText = firstNum.innerText.substring(0, firstNum.innerText.length - 1);
+    }
 
-//     if (inputPenel.innerText == "") {
-//         inputPenel.innerText = "0";
-//         isExpressionClear = true;
-//     }
-// }
+    if (firstNum.innerText == '') {
+        clearHandler();
+    }
+}
 
-// function equalHandler() {
-//     inputPenel.innerText = eval(inputPenel.innerText);
-//     isExpressionClear = true;
-//     isOperationDefined = false;
-// }
+function equalHandler() {
+    const result = eval(firstNum.innerText + sign.innerText + secondNum.innerText);
+    clearHandler();
+    firstNum.innerText = result;
+    isExpressionClear = false;
+}
 
-// function inputHandler(char) {
-//     if (isExpressionClear) {
-//         inputPenel.innerText = "";
-//         isExpressionClear = false;
-//         if (!isNumber(char)) {
-//             inputPenel.innerText = "0";
-//         }
-//     }
 
-//     if (isNumber(char)) {
-//         inputPenel.innerText = inputPenel.innerText + char;
-//     } else if (!isOperationDefined) {
-//         inputPenel.innerText = inputPenel.innerText + "\xa0" + char + "\xa0";
-//         isOperationDefined = true;
-//     } else {
-//         if (isNumber(inputPenel.innerText.substr(-1))) {
-//             equalHandler();
-//             inputPenel.innerText = inputPenel.innerText + "\xa0" + char + "\xa0";
-//             isOperationDefined = true;
-//             isExpressionClear = false;
-//         } else {
-//             inputPenel.innerText = inputPenel.innerText.substring(0, inputPenel.innerText.length - 3);
-//             inputPenel.innerText = inputPenel.innerText + "\xa0" + char + "\xa0";
-//         }
-//     }
-// }
+function inputHandler(char) {
+    if (isExpressionClear) {
+        firstNum.innerText = "";
+        isExpressionClear = false;
+        if (!isNumber(char)) {
+            firstNum.innerText = "0";
+        }
+    }
+
+    if (isNumber(char)) {                                           // на вход идет цифра
+        if (!isOperationDefined) {                                  // это цифра в первом цисле
+            firstNum.innerText = firstNum.innerText + char;
+        } else {                                                    // это цифра во втором числе 
+            secondNum.innerText = secondNum.innerText + char;
+            sign.style.color = "#acacac";
+        }
+    } else if (!isOperationDefined) {                               // введо только первлое число
+        if (char == "." && !firstNum.innerText.includes(".")) {     // на вход идет первая точка для первого числа
+            firstNum.innerText = firstNum.innerText + char;
+        } else {                                                    // на вход идет первый знак опрерации
+            firstNum.style.color = "#acacac";
+            sign.innerText = "\xa0" + char + "\xa0";
+            isOperationDefined = true;
+        }
+    } else {                                                        // операция определена, на вход идет не цифра
+        if (char == "." && !secondNum.innerText.includes(".")) {    // на вход идет первая точка для второго числа
+            secondNum.innerText = secondNum.innerText + char;
+        } else {                                                    // на вход идет новая операция  
+            equalHandler();
+            firstNum.style.color = "#acacac";
+            sign.innerText = "\xa0" + char + "\xa0";
+            isOperationDefined = true;
+        }
+    }
+}
 
 function isNumber(char) {
     if (char >= '0' && char <= '9') {
