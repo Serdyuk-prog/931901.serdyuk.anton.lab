@@ -1,3 +1,121 @@
-body{
-    
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg {
+    background-image: url(./imgs/1.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg:hover {
+    background-position: 0 -5vh;
+}
+
+.disappear {
+    position: absolute;
+    top: -100vh;
+    transition: all 2s;
+}
+
+.lamp {
+    background-image: url(./imgs/lamp1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    margin-right: 5px;
+}
+
+.lamp:active {
+    background-image: url(./imgs/lamp2.png);
+}
+
+.wizzard {
+    /* 360/480 */
+    background-image: url(./imgs/2.jpg);
+    background-size: contain;
+    width: 384px;
+    height: 288px;
+    margin-right: 50px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    visibility: hidden;
+}
+
+.magic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hat {
+    background-image: url(./imgs/hat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+#animal {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    transition: top 0.5s;
+    top: 0px;
+}
+
+#animal.bunny {
+    background-image: url(./imgs/bunny.png);
+}
+
+#animal.dove {
+    background-image: url(./imgs/dove.png);
+}
+
+#animal.move {
+    top: 110px;
+}
+
+.trapezoid {
+    pointer-events: none;
+    position: absolute;
+    top: 85px;
+    border-bottom: 85vh solid rgba(255, 208, 0, 0.199);
+    border-left: 465px solid transparent;
+    border-right: 465px solid transparent;
+    height: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    visibility: hidden;
+    z-index: 3;
 }
